@@ -74,4 +74,13 @@ public class RookieCtrl {
     public Object cache(@PathVariable("id") Integer id) {
         return rookieService.searchWithCache(id);
     }
+
+    @RequestMapping("/remove/cache/{id}")
+    @ResponseBody
+    public Object removeCache(@PathVariable("id") Integer id) {
+
+        rookieService.removeLocalCache(id);
+
+        return true;
+    }
 }
