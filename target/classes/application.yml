@@ -1,0 +1,30 @@
+# the port of server
+server:
+  port: 4321
+
+# spring setting
+spring:
+
+  # database
+  datasource:
+    url: jdbc:mysql://47.98.104.252:3306/spring_rookie?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&rewriteBatchedStatements=true&useCursorFetch=true&useSSL=false
+    username: root
+    password: Root@3306
+  # view
+  thymeleaf:
+    prefix: classpath:/web/
+    suffix: .html
+    mode: HTML5
+    content-type: text/html
+    cache: false
+
+
+
+# mybatis setting
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*.xml
+  type-aliases-package: com.pkgs.entity
+
+# logback
+logging:
+  config: classpath:setting/logback.xml
