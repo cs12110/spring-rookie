@@ -17,7 +17,14 @@
 ### 1.2 Spring 各个模块说明
 
 
+[Spring 7大模块简要说明 link](http://www.cnblogs.com/ywlaker/p/6136625.html)
+
+
 ### 1.3 Spring配置参数
+
+[Spring官方参考文档 link](https://docs.spring.io/spring-boot/docs/2.1.3.RELEASE/reference/htmlsingle/)
+
+参数配置请参考章节: `Appendix A. Common application properties`.
 
 ---
 
