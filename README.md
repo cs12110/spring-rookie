@@ -28,6 +28,16 @@
 
 ---
 
-## 2. 其他 
+## 2. 项目资源说明
+
+
+### 2.1 数据库运行脚本
+
+数据库脚本位于: [sql脚本](docs/spring_rookie.sql)
+
+
+### 2.2 guide 
+
+帮助文档: [guide](docs/guide.md)
 
 

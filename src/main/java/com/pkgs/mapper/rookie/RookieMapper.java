@@ -27,6 +27,4 @@ public interface RookieMapper {
      * @return RookieEntity
      */
     public RookieEntity query(@Param("id") Integer id);
-
-
 }

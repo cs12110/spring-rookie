@@ -31,13 +31,10 @@ public class RookieService {
 
     @Transactional(rollbackFor = Exception.class)
     public Integer insert(RookieEntity entity) {
-
         rookieMapper.insert(entity);
-
         if ("admin".equals(entity.getName())) {
             throw new IllegalArgumentException("Disallow to be admin");
         }
-
         return entity.getId();
     }
 

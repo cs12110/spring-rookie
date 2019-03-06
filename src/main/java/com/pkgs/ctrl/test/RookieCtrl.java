@@ -1,4 +1,4 @@
-package com.pkgs.ctrl;
+package com.pkgs.ctrl.test;
 
 import com.pkgs.conf.anno.AntiResubmit;
 import com.pkgs.entity.RookieEntity;
