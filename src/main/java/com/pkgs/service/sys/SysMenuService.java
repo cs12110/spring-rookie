@@ -1,6 +1,6 @@
-package com.pkgs.service;
+package com.pkgs.service.sys;
 
-import com.pkgs.entity.SysMenu;
+import com.pkgs.entity.sys.SysMenu;
 import com.pkgs.mapper.sys.SysMenuMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

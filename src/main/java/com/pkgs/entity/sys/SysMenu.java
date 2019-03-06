@@ -1,4 +1,4 @@
-package com.pkgs.entity;
+package com.pkgs.entity.sys;
 
 import com.alibaba.fastjson.JSON;
 import lombok.Data;

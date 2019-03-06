@@ -1,7 +1,7 @@
 package test.pkgs;
 
-import com.pkgs.entity.RookieEntity;
-import com.pkgs.service.RookieService;
+import com.pkgs.entity.rookie.RookieEntity;
+import com.pkgs.service.rookie.RookieService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**

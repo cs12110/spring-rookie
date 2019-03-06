@@ -4,7 +4,7 @@
 
 <mapper namespace="com.pkgs.mapper.sys.SysRoleMapper">
 
-    <resultMap type="com.pkgs.entity.SysRole" id="baseMap">
+    <resultMap type="com.pkgs.entity.sys.SysRole" id="baseMap">
         <id column="id" property="id"/>
         <result column="name" property="name"/>
     </resultMap>

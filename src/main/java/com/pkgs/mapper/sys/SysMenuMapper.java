@@ -1,6 +1,6 @@
 package com.pkgs.mapper.sys;
 
-import com.pkgs.entity.SysMenu;
+import com.pkgs.entity.sys.SysMenu;
 
 import java.util.List;
 

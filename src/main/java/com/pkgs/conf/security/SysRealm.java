@@ -1,12 +1,12 @@
 package com.pkgs.conf.security;
 
 
-import com.pkgs.entity.SysMenu;
-import com.pkgs.entity.SysRole;
-import com.pkgs.entity.SysUser;
-import com.pkgs.service.SysMenuService;
-import com.pkgs.service.SysRoleService;
-import com.pkgs.service.SysUserService;
+import com.pkgs.entity.sys.SysMenu;
+import com.pkgs.entity.sys.SysRole;
+import com.pkgs.entity.sys.SysUser;
+import com.pkgs.service.sys.SysMenuService;
+import com.pkgs.service.sys.SysRoleService;
+import com.pkgs.service.sys.SysUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;

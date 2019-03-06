@@ -1,6 +1,6 @@
-package com.pkgs.service;
+package com.pkgs.service.sys;
 
-import com.pkgs.entity.SysRole;
+import com.pkgs.entity.sys.SysRole;
 import com.pkgs.mapper.sys.SysRoleMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;

@@ -1,6 +1,6 @@
 package com.pkgs.mapper.sys;
 
-import com.pkgs.entity.SysUser;
+import com.pkgs.entity.sys.SysUser;
 
 /**
  * <p/>

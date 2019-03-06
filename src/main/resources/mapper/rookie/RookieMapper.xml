@@ -4,7 +4,7 @@
 
 <mapper namespace="com.pkgs.mapper.rookie.RookieMapper">
 
-    <resultMap type="com.pkgs.entity.RookieEntity" id="baseMap">
+    <resultMap type="com.pkgs.entity.rookie.RookieEntity" id="baseMap">
         <id column="id" property="id"/>
         <result column="name" property="name"/>
     </resultMap>
@@ -13,7 +13,7 @@
         select * from rookie_t where id = #{id}
     </select>
 
-    <insert id="insert" parameterType="com.pkgs.entity.RookieEntity" useGeneratedKeys="true" keyProperty="id">
+    <insert id="insert" parameterType="com.pkgs.entity.rookie.RookieEntity" useGeneratedKeys="true" keyProperty="id">
         insert into rookie_t(
                 `name`
             ) values(

@@ -1,6 +1,6 @@
 package com.pkgs.mapper.rookie;
 
-import com.pkgs.entity.RookieEntity;
+import com.pkgs.entity.rookie.RookieEntity;
 import org.apache.ibatis.annotations.Param;
 
 /**
