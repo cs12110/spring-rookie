@@ -32,7 +32,7 @@ spring:
 # mybatis setting
 mybatis-plus:
   mapper-locations: classpath*:mapper/*/*.xml
-  type-aliases-package: com.pkgs.entity
+  #type-aliases-package: com.pkgs.entity
 
 # logback
 logging:
