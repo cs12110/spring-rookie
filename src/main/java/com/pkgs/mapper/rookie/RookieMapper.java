@@ -1,7 +1,7 @@
 package com.pkgs.mapper.rookie;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.pkgs.entity.RookieEntity;
+import com.pkgs.entity.rookie.RookieEntity;
 import org.apache.ibatis.annotations.Param;
 
 /**
@@ -17,6 +17,7 @@ public interface RookieMapper extends BaseMapper<RookieEntity> {
      * 新增
      *
      * @param entity entity
+     * @return int num
      */
     @Override
     public int insert(RookieEntity entity);

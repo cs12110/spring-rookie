@@ -1,13 +1,13 @@
 package test.pkgs;
 
+
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.pkgs.entity.RookieEntity;
+import com.pkgs.entity.rookie.RookieEntity;
 import com.pkgs.mapper.rookie.RookieMapper;
-import com.pkgs.service.RookieService;
-import org.apache.shiro.web.servlet.ShiroFilter;
+import com.pkgs.service.rookie.RookieService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
@@ -27,7 +27,6 @@ public class SpringTestImpl extends AbstractSpringTest {
     @Override
     public void test() {
 
-        ShiroFilter shiroFilter;
 
         for (int index = 0; index < 10; index++) {
             RookieEntity entity = new RookieEntity();

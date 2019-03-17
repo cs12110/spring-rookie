@@ -1,6 +1,6 @@
 package com.pkgs.mapper.sys;
 
-import com.pkgs.entity.SysRole;
+import com.pkgs.entity.sys.SysRole;
 
 import java.util.List;
 

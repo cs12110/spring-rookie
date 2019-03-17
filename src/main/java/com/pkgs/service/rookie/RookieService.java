@@ -1,6 +1,6 @@
-package com.pkgs.service;
+package com.pkgs.service.rookie;
 
-import com.pkgs.entity.RookieEntity;
+import com.pkgs.entity.rookie.RookieEntity;
 import com.pkgs.mapper.rookie.RookieMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

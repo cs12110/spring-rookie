@@ -4,6 +4,17 @@ server:
 
 # spring setting
 spring:
+  #redis
+  redis:
+    cluster:
+      nodes: 10.10.2.233:7000,10.10.2.233:7001,10.10.2.233:7002,10.10.2.233:7003,10.10.2.233:7004,10.10.2.233:7005
+    timeout: 1000
+    pool:
+      max-active: 20
+      max-idle: 8
+      min-idle: 2
+      max-wait: 10
+  # mysql
   datasource:
     url: jdbc:mysql://47.98.104.252:3306/spring_rookie?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&rewriteBatchedStatements=true&useCursorFetch=true&useSSL=false
     username: root
@@ -21,7 +32,7 @@ spring:
 # mybatis setting
 mybatis-plus:
   mapper-locations: classpath*:mapper/*/*.xml
-  type-aliases-package: com.pkgs.entity
+  #type-aliases-package: com.pkgs.entity
 
 # logback
 logging:

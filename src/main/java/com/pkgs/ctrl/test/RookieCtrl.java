@@ -1,8 +1,8 @@
 package com.pkgs.ctrl.test;
 
 import com.pkgs.conf.anno.AntiResubmit;
-import com.pkgs.entity.RookieEntity;
-import com.pkgs.service.RookieService;
+import com.pkgs.entity.rookie.RookieEntity;
+import com.pkgs.service.rookie.RookieService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -59,7 +59,7 @@ public class RookieCtrl {
 
         RookieEntity entity = new RookieEntity();
         if (type == 1) {
-            entity.setName("just test");
+            entity.setName("just rookie");
         } else {
             entity.setName("admin");
         }

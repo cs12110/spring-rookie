@@ -1,6 +1,6 @@
-package com.pkgs.service;
+package com.pkgs.service.sys;
 
-import com.pkgs.entity.SysUser;
+import com.pkgs.entity.sys.SysUser;
 import com.pkgs.mapper.sys.SysUserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
