@@ -1,5 +1,6 @@
 package com.pkgs.mapper.rookie;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.pkgs.entity.RookieEntity;
 import org.apache.ibatis.annotations.Param;
 
@@ -10,14 +11,15 @@ import org.apache.ibatis.annotations.Param;
  * <p>
  * since: 1.0.0
  */
-public interface RookieMapper {
+public interface RookieMapper extends BaseMapper<RookieEntity> {
 
     /**
      * 新增
      *
      * @param entity entity
      */
-    public void insert(RookieEntity entity);
+    @Override
+    public int insert(RookieEntity entity);
 
 
     /**
@@ -27,6 +29,4 @@ public interface RookieMapper {
      * @return RookieEntity
      */
     public RookieEntity query(@Param("id") Integer id);
-
-
 }

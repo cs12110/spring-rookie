@@ -1,4 +1,4 @@
-package com.pkgs.ctrl;
+package com.pkgs.ctrl.test;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

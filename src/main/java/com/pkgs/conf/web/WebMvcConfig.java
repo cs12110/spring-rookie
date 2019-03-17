@@ -18,5 +18,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         // 配置js和css的位置
         registry.addResourceHandler("/static/**").addResourceLocations("classpath:/web/static/");
+        registry.addResourceHandler("/simple/**").addResourceLocations("classpath:/web/simple/");
+        registry.addResourceHandler("/login/**").addResourceLocations("classpath:/web/login/");
     }
 }
