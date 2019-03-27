@@ -1,4 +1,4 @@
-package com.pkgs.conf.filters;
+package com.pkgs.conf.filter;
 
 import org.springframework.stereotype.Component;
 
