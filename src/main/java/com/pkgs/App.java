@@ -1,14 +1,16 @@
 package com.pkgs;
 
+import com.pkgs.entity.rookie.MyEntity;
 import com.pkgs.util.SpringCtxUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.ApplicationContext;
 
-
+import javax.annotation.PostConstruct;
 
 
 /**
@@ -29,5 +31,15 @@ public class App {
         SpringCtxUtil.init(context);
 
         log.info("Good luck, rookie");
+
+
+    }
+
+    @Autowired
+    private MyEntity entity;
+
+    @PostConstruct
+    public void init() {
+        log.info(entity.toString());
     }
 }

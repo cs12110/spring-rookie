@@ -1,15 +1,19 @@
 package com.pkgs.conf.aop;
 
+import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
+import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * <p/>
@@ -35,14 +39,14 @@ public class ReqLogInterceptor {
 
             if (null != attributes) {
                 HttpServletRequest request = attributes.getRequest();
+                MethodSignature signature = (MethodSignature) joinPoint.getSignature();
 
-                StringBuilder builder = new StringBuilder();
-                builder.append(" url:").append(request.getRequestURL());
-                builder.append(" method:").append(request.getMethod());
-                builder.append(" mapping:").append(joinPoint.getSignature());
+                Map<String, Object> map = new HashMap<>(3);
+                map.put("url", request.getRequestURL());
+                map.put("method", request.getMethod());
+                map.put("mapping", signature.getMethod());
 
-
-                log.info(builder.toString());
+                log.info(JSON.toJSONString(map));
             }
 
         } catch (Throwable e) {

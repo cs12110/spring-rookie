@@ -75,7 +75,7 @@ public class ShiroSecurity {
         factory.setSecurityManager(manager);
 
         factory.setLoginUrl("/login/login.html");
-        factory.setUnauthorizedUrl("/login/login.html");
+        factory.setUnauthorizedUrl("/home/forbid");
         factory.setFilterChainDefinitionMap(filterMap);
 
         return factory;

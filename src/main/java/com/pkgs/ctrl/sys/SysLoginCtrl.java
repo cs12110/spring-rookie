@@ -28,14 +28,14 @@ public class SysLoginCtrl {
 
     @RequestMapping("in")
     @ResponseBody
-    public String in(String username, String password) {
-        log.info(username + ":" + password);
+    public String in(String name, String password) {
+        log.info(name + ":" + password);
         Map<String, Object> map = new HashMap<>(2);
         map.put("login", true);
         try {
             // 使用shiro进行登录校验
             Subject subject = SecurityUtils.getSubject();
-            UsernamePasswordToken token = new UsernamePasswordToken(username, password);
+            UsernamePasswordToken token = new UsernamePasswordToken(name, password);
             subject.login(token);
 
             map.put("next", "simple/index");
@@ -49,16 +49,19 @@ public class SysLoginCtrl {
     }
 
 
-    @RequestMapping("out")
+    @RequestMapping("admin")
     @RequiresPermissions("admin:admin")
-    public String out() {
-        log.info("out");
-        return "login/login";
+    public String admin() {
+        return "login/admin";
     }
 
 
-    @RequestMapping("out1")
-    public String out1() {
-        return "simple/index1";
+    @RequestMapping("out")
+    public String out() {
+        Subject subject = SecurityUtils.getSubject();
+        if (null != subject) {
+            subject.logout();
+        }
+        return "simple/index";
     }
 }

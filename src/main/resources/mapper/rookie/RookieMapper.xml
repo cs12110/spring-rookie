@@ -17,7 +17,7 @@
         select * from rookie_t
     </select>
 
-    <insert id="insert" parameterType="com.pkgs.entity.RookieEntity" useGeneratedKeys="true" keyProperty="id">
+    <insert id="insert" parameterType="com.pkgs.entity.rookie.RookieEntity" useGeneratedKeys="true" keyProperty="id">
         insert into rookie_t(
         `name`
         ) values(

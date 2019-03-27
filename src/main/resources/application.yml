@@ -37,3 +37,9 @@ mybatis-plus:
 # logback
 logging:
   config: classpath:setting/logback.xml
+
+# my
+my:
+  name: cs12110
+  age: 36
+  gender: male

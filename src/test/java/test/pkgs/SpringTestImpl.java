@@ -3,12 +3,15 @@ package test.pkgs;
 
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.enums.SqlMethod;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.pkgs.entity.rookie.RookieEntity;
 import com.pkgs.mapper.rookie.RookieMapper;
 import com.pkgs.service.rookie.RookieService;
+import org.apache.ibatis.session.Configuration;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.properties.source.ConfigurationPropertyName;
 
 /**
  * TODO:
@@ -26,6 +29,9 @@ public class SpringTestImpl extends AbstractSpringTest {
 
     @Override
     public void test() {
+
+        SqlMethod sqlMethod;
+        Configuration configuration;
 
 
         for (int index = 0; index < 10; index++) {

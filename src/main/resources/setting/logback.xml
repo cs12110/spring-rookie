@@ -20,7 +20,7 @@
               class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>logs/sys.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <fileNamePattern>logs/spark-cms%d{yyyyMMdd}-%i.log</fileNamePattern>
+            <fileNamePattern>logs/rookie%d{yyyyMMdd}-%i.log</fileNamePattern>
             <!-- each file capacity 10mb -->
             <maxFileSize>128MB</maxFileSize>
             <!-- keep 7 days -->

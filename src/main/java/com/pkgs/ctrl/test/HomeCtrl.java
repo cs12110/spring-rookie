@@ -18,4 +18,9 @@ public class HomeCtrl {
     public String index() {
         return "simple/index.html";
     }
+
+    @RequestMapping("/forbid")
+    public String forbid() {
+        return "simple/forbid";
+    }
 }
