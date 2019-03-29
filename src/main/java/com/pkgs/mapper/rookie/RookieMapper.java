@@ -20,7 +20,7 @@ public interface RookieMapper extends BaseMapper<RookieEntity> {
      * @return int num
      */
     @Override
-    public int insert(RookieEntity entity);
+    int insert(RookieEntity entity);
 
 
     /**
@@ -29,5 +29,5 @@ public interface RookieMapper extends BaseMapper<RookieEntity> {
      * @param id id
      * @return RookieEntity
      */
-    public RookieEntity query(@Param("id") Integer id);
+    RookieEntity query(@Param("id") Integer id);
 }

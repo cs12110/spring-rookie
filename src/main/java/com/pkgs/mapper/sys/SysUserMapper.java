@@ -17,5 +17,5 @@ public interface SysUserMapper {
      * @param userName 用户名称
      * @return SysUser
      */
-    public SysUser findUserByName(String userName);
+    SysUser findUserByName(String userName);
 }

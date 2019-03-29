@@ -31,8 +31,6 @@ public class App {
         SpringCtxUtil.init(context);
 
         log.info("Good luck, rookie");
-
-
     }
 
     @Autowired

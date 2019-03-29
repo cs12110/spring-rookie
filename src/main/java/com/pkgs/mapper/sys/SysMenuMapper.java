@@ -19,5 +19,5 @@ public interface SysMenuMapper {
      * @param roleId 角色id
      * @return list
      */
-    public List<SysMenu> findMenuByRole(Integer roleId);
+    List<SysMenu> findMenuByRole(Integer roleId);
 }

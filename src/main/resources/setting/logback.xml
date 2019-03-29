@@ -33,7 +33,7 @@
     </appender>
 
     <!-- 如需打印sql,请开启 -->
-     <logger name="com.pkgs.mapper" level="DEBUG"/>
+    <logger name="com.pkgs.mapper" level="DEBUG"/>
 
     <logger name="org.apache.http" level="ERROR"/>
     <logger name="org.springboot.sample" level="ERROR"/>

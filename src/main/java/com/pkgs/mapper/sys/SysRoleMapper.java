@@ -19,5 +19,5 @@ public interface SysRoleMapper {
      * @param userId 用户id
      * @return SysUser
      */
-    public List<SysRole> findRoleByUser(Integer userId);
+    List<SysRole> findRoleByUser(Integer userId);
 }
