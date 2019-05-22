@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 
 /**
+ * Filter与Interceptor的顺序:  request -> filter -> interceptor -> controller -> interceptor -> filter -> response
  * <p/>
  *
  * @author cs12110 created at: 2019/3/27 17:12

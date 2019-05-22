@@ -22,7 +22,8 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * TODO:
+ * 用户登录认证,校权中心
+ *
  * <p>
  * reference: <a href="https://segmentfault.com/a/1190000014479154">link</a>
  *
@@ -44,12 +45,13 @@ public class SysRealm extends AuthorizingRealm {
 
 
     /**
-     * 校验用户是否具有访问某一个资源的权限
+     * 校验用户是否具有访问某一个资源的权限,拦截方法的时候,需要在方法上面添加相应的注解,例如: @RequiresPermissions
      *
      * @param principalCollection {@link PrincipalCollection}
      * @return AuthorizingRealm
      */
     @Override
+
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
         if (null == principalCollection) {
             throw new AuthenticationException("invalid user");
@@ -71,9 +73,9 @@ public class SysRealm extends AuthorizingRealm {
         }
 
 
+        // 主要是这个玩意,有@RequiresPrmissions注解的时候,会被拦截校验
         SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
         info.addRoles(roleList);
-        // 主要是这个玩意
         info.addStringPermissions(permList);
 
         return info;
@@ -110,7 +112,6 @@ public class SysRealm extends AuthorizingRealm {
             List<SysMenu> sysMenus = sysMenuService.queryByRole(role.getId());
             menus.addAll(sysMenus);
         }
-
 
         sysUser.setSysRoles(roles);
         sysUser.setSysMenus(menus);
