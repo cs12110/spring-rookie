@@ -13,7 +13,9 @@ import javax.jms.Queue;
 import javax.jms.Topic;
 
 /**
- * @author huanghuapeng create at 2019/5/23 20:36
+ * 设置activemq
+ *
+ * @author cs12110 create at 2019/5/23 20:36
  * @version 1.0.0
  */
 @Configuration
@@ -21,7 +23,7 @@ public class ActiveMq {
 
 
     @Autowired
-    private ActiveMqConf activeMqConf;
+    private ActiveMqProperties activeMqConf;
 
     @Bean
     public Queue queue() {

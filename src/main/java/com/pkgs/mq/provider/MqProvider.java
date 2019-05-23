@@ -48,6 +48,6 @@ public class MqProvider {
 
     @JmsListener(destination = "out.queue")
     public void consumerMsg(String msg) {
-        logger.info("Consumer from out.queue:{}", msg);
+        logger.info("Provider get:{}", msg);
     }
 }

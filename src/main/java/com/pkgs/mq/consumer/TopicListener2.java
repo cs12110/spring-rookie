@@ -11,8 +11,8 @@ import org.springframework.stereotype.Component;
  * @version 1.0.0
  */
 @Component
-public class TopicListener {
-    private static final Logger logger = LoggerFactory.getLogger(TopicListener.class);
+public class TopicListener2 {
+    private static final Logger logger = LoggerFactory.getLogger(TopicListener2.class);
 
     @JmsListener(destination = "publish.topic", containerFactory = "jmsListenerContainerTopic")
     @SendTo("out.queue")

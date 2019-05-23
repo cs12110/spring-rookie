@@ -19,7 +19,17 @@ public class MqCtrl {
 
     @RequestMapping("/topic")
     @ResponseBody
-    public void topic() {
+    public String topic() {
         mqProvider.sendTopicMessage(5);
+        return "SUCCESS";
+    }
+
+
+    @RequestMapping("/queue")
+    @ResponseBody
+    public String queue() {
+        mqProvider.sendQueueMessage(5);
+
+        return "SUCCESS";
     }
 }

@@ -1,9 +1,7 @@
 package com.pkgs;
 
-import com.pkgs.conf.mq.ActiveMqConf;
 import com.pkgs.entity.rookie.MyEntity;
 import com.pkgs.listener.SysEvent;
-import com.pkgs.mq.provider.MqProvider;
 import com.pkgs.util.SpringCtxUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.mybatis.spring.annotation.MapperScan;
@@ -12,7 +10,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.ApplicationEvent;
 
 import javax.annotation.PostConstruct;
 
@@ -44,20 +41,13 @@ public class App {
     private MyEntity entity;
 
 
-    @Autowired
-    private MqProvider provider;
-
     @PostConstruct
     public void init() {
         log.info(entity.toString());
         /*
          * sys event
          */
-        // applicationContext.publishEvent(new SysEvent("1"));
-        //applicationContext.publishEvent(new SysEvent("2"));
-
-
-        //provider.sendQueueMessage(3);
-        //provider.sendTopicMessage(5);
+        applicationContext.publishEvent(new SysEvent("1"));
+        applicationContext.publishEvent(new SysEvent("2"));
     }
 }

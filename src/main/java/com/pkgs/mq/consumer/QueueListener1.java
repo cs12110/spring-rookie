@@ -11,15 +11,15 @@ import org.springframework.stereotype.Component;
  * @version 1.0.0
  */
 @Component
-public class QueueListener {
-    private static final Logger logger = LoggerFactory.getLogger(QueueListener.class);
+public class QueueListener1 {
+    private static final Logger logger = LoggerFactory.getLogger(QueueListener1.class);
 
     @JmsListener(destination = "publish.queue", containerFactory = "jmsListenerContainerQueue")
     @SendTo("out.queue")
     public String take(String text) {
         logger.info("take:{}", text);
 
-        return "queue-listener: " + text;
+        return "ql1-: " + text;
     }
 
 }
