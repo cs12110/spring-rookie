@@ -71,6 +71,7 @@ public class ShiroSecurity {
         // /rookie/下的所有请求不被拦截
         filterMap.put("/rookie/**", "anon");
         filterMap.put("/login/**", "anon");
+        filterMap.put("/mq/**", "anon");
 
         // 其他路径需要登录,这个配置一定要放到最后,不然全部会被拦截
         filterMap.put("/**", "user");

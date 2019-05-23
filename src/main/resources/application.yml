@@ -26,8 +26,21 @@ spring:
     mode: HTML5
     content-type: text/html
     cache: false
+  # activemq
+#  activemq:
+#    user: admin
+#    password: admin
+#    broker-url: tcp://192.168.99.205:61616
+#    pool:
+#      enabled: true
+#      max-connections: 10
 
-
+mqconf:
+  queueName: publish.queue
+  topicName: publish.topic
+  user: admin
+  password: admin
+  broker-url: tcp://192.168.99.205:61616
 
 # mybatis setting
 mybatis-plus:
