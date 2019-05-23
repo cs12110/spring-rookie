@@ -4,6 +4,7 @@ import com.pkgs.conf.anno.AntiResubmit;
 import com.pkgs.entity.rookie.RookieEntity;
 import com.pkgs.service.rookie.RookieService;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -38,6 +39,7 @@ public class RookieCtrl {
 
     @RequestMapping("/test")
     @ResponseBody
+    @RequiresPermissions("admin:admin")
     public Object test() {
 
         RookieEntity entity = new RookieEntity();

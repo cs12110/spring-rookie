@@ -9,6 +9,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.ApplicationContext;
+import org.springframework.web.servlet.DispatcherServlet;
 
 import javax.annotation.PostConstruct;
 
@@ -31,6 +32,9 @@ public class App {
         SpringCtxUtil.init(context);
 
         log.info("Good luck, rookie");
+
+
+        DispatcherServlet dispatcherServlet;
     }
 
     @Autowired

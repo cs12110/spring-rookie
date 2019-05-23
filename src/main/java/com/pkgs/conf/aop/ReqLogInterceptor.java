@@ -50,7 +50,7 @@ public class ReqLogInterceptor {
             }
 
         } catch (Throwable e) {
-            log.error("{}", e);
+            log.error("{}", e.getMessage());
         }
     }
 }

@@ -18,7 +18,7 @@ import javax.servlet.Filter;
 @Configuration
 public class FilterConf {
 
-    @Bean
+    //@Bean
     public FilterRegistrationBean firstFilter() {
         FilterRegistrationBean<Filter> registrationBean = new FilterRegistrationBean<>();
 
@@ -30,7 +30,7 @@ public class FilterConf {
     }
 
 
-    @Bean
+    //@Bean
     public FilterRegistrationBean secondFilter() {
         FilterRegistrationBean<Filter> registrationBean = new FilterRegistrationBean<>();
 

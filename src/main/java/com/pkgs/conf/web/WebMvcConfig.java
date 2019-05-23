@@ -1,6 +1,5 @@
 package com.pkgs.conf.web;
 
-import com.pkgs.conf.interceptor.MyInterceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -18,7 +17,8 @@ public class WebMvcConfig implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new MyInterceptor());
+
+        //registry.addInterceptor(new MyInterceptor());
     }
 
     @Override

@@ -3,7 +3,6 @@ package com.pkgs.conf.security;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.cache.CacheManager;
 import org.apache.shiro.cache.MemoryConstrainedCacheManager;
-import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.mgt.SessionsSecurityManager;
 import org.apache.shiro.realm.Realm;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
@@ -16,7 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * TODO: Shiro security
+ * Shiro security
  *
  * @author cs12110 create at: 2019/3/5 21:41
  * Since: 1.0.0
@@ -39,6 +38,11 @@ public class ShiroSecurity {
         return manager;
     }
 
+    /**
+     * 实现校权和认证
+     *
+     * @return Realm
+     */
     @Bean
     public Realm realm() {
         return new SysRealm();
@@ -62,21 +66,23 @@ public class ShiroSecurity {
      * @return ShiroFilterFactoryBean
      */
     @Bean
-    public ShiroFilterFactoryBean shiroFilterFactoryBean(SecurityManager manager) {
-        Map<String, String> filterMap = new HashMap<>(1);
+    public ShiroFilterFactoryBean shiroFilterFactoryBean() {
+        Map<String, String> filterMap = new HashMap<>(3);
         // /rookie/下的所有请求不被拦截
         filterMap.put("/rookie/**", "anon");
         filterMap.put("/login/**", "anon");
-        // 其他路径需要登录
-        filterMap.put("/**", "authc");
+
+        // 其他路径需要登录,这个配置一定要放到最后,不然全部会被拦截
+        filterMap.put("/**", "user");
 
 
         ShiroFilterFactoryBean factory = new ShiroFilterFactoryBean();
-        factory.setSecurityManager(manager);
+        factory.setSecurityManager(sessionsSecurityManager());
 
         factory.setLoginUrl("/login/login.html");
         factory.setUnauthorizedUrl("/home/forbid");
         factory.setFilterChainDefinitionMap(filterMap);
+
 
         return factory;
     }
